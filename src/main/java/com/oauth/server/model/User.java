@@ -19,9 +19,9 @@ public class User implements Serializable {
         this.password = user.getPassword();
         this.email = user.getEmail();
         this.enabled = user.isEnabled();
-        this.accountNonExpired = user.isAccountNonExpired();
-        this.credentialsNonExpired = user.isCredentialsNonExpired();
-        this.accountNonLocked = user.isAccountNonLocked();
+        this.accountnonexpired = user.isAccountNonExpired();
+        this.credentialsnonexpired = user.isCredentialsNonExpired();
+        this.accountnonlocked = user.isAccountNonLocked();
         this.roles = user.getRoles();
     }
 
@@ -37,12 +37,12 @@ public class User implements Serializable {
     private String email;
     @Column(name = "enabled")
     private boolean enabled;
-    @Column(name = "accountNonExpired")
-    private boolean accountNonExpired;
-    @Column(name = "credentialsNonExpired")
-    private boolean credentialsNonExpired;
-    @Column(name = "accountNonLocked")
-    private boolean accountNonLocked;
+    @Column(name = "accountnonexpired")
+    private boolean accountnonexpired;
+    @Column(name = "credentialsnonexpired")
+    private boolean credentialsnonexpired;
+    @Column(name = "accountnonlocked")
+    private boolean accountnonlocked;
 
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -93,27 +93,27 @@ public class User implements Serializable {
 	}
 
 	public boolean isAccountNonExpired() {
-		return accountNonExpired;
+		return accountnonexpired;
 	}
 
-	public void setAccountNonExpired(boolean accountNonExpired) {
-		this.accountNonExpired = accountNonExpired;
+	public void setAccountNonExpired(boolean accountnonexpired) {
+		this.accountnonexpired = accountnonexpired;
 	}
 
 	public boolean isCredentialsNonExpired() {
-		return credentialsNonExpired;
+		return credentialsnonexpired;
 	}
 
-	public void setCredentialsNonExpired(boolean credentialsNonExpired) {
-		this.credentialsNonExpired = credentialsNonExpired;
+	public void setCredentialsNonExpired(boolean credentialsnonexpired) {
+		this.credentialsnonexpired = credentialsnonexpired;
 	}
 
 	public boolean isAccountNonLocked() {
-		return accountNonLocked;
+		return accountnonlocked;
 	}
 
-	public void setAccountNonLocked(boolean accountNonLocked) {
-		this.accountNonLocked = accountNonLocked;
+	public void setAccountNonLocked(boolean accountnonlocked) {
+		this.accountnonlocked = accountnonlocked;
 	}
 
 	public List<Role> getRoles() {
